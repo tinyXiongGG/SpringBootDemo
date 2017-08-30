@@ -1,13 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bootstrap 101 Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--IE 兼容-->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <!-- Bootstrap -->
+  <link href="../static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <style>
+    .div-space {
+      padding-top: 100px;
+      padding-bottom: 150px;
+    }
+    @media only screen and (max-width: 640px) {
+      .div-space {
+        padding-top: 0;
+        padding-bottom: 40px;
+      }
+    }
+  </style>
 </head>
 <body>
-<h1>Hello, world!</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+      
+      </div>
+      <div class="col-md-6 div-space">
+        <h1>Login to wherecani.live:</h1>
+        <div class="">
+          <form class="form-horizontal" action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group" id="username__row">
+              <label class="control-label col-sm-3" for="username">Email</label>
+              <div class="col-sm-9">
+                <input class="form-control string" id="username" name="email"
+                       type="text" value=""/><span class="help-block"></span>
+              </div>
+            </div>
+            <div class="form-group" id="password__row">
+              <label class="control-label col-sm-3" for="password">密码</label>
+              <div class="col-sm-9">
+                <input class="form-control password" id="password" name="password" type="password"
+                       value=""/><span class="help-block"></span>
+              </div>
+            </div>
+            <div class="form-group" id="submit_record__row">
+              <div class="col-sm-9 col-sm-offset-3">
+                <input class="btn btn-primary" type="submit" value="登录" />
+                <button class="btn btn-default w2p-form-button" onclick="window.location=&#x27;/user/request_reset_password&#x27;;return false">忘记密码</button>
+              </div>
+            </div>
+            <div style="display:none;">
+              <input name="_next" type="hidden" value="/results" />
+              <input name="_formkey" type="hidden" value="4b61942f-a44d-4a03-be9d-a7639b108fae" />
+              <input name="_formname" type="hidden" value="login" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <script src="../static/js/jquery-3.2.1.js"></script>
 <script src="../static/js/bootstrap.min.js"></script>
 </body>
