@@ -5,10 +5,7 @@ package xionggg.demo.common;
  */
 public class ResultBean<T> {
 
-    public static final int SUCCESS = 0;
-    public static final int FAIL = 1;
-
-    private int code = SUCCESS;
+    private int code = ResultCode.SUCCESS;
     private String msg = "success";
     private T data;
 
@@ -21,9 +18,15 @@ public class ResultBean<T> {
         this.data = data;
     }
 
+    public ResultBean(int code, String msg, T date){
+        this.code = code;
+        this.msg = msg;
+        this.data = date;
+    }
+
     public ResultBean(Throwable e){
         super();
-        this.code = FAIL;
+        this.code = ResultCode.FAIL;
         this.msg = e.getMessage();
     }
 

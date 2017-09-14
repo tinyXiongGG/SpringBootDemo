@@ -1,6 +1,7 @@
 package xionggg.demo.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -13,9 +14,9 @@ import java.util.Date;
  * @Date: 2017-09-05 14:18
  */
 @Entity
-@Table(name = "tb_order")
 public class Order {
     /*订单id*/
+    @Id
     private String orderId;
 
     /*实付金额*/

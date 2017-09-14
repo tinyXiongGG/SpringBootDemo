@@ -2,15 +2,14 @@ package xionggg.demo.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import xionggg.demo.entity.User;
+import xionggg.demo.entity.Card;
 
 /**
  * Created with IntelliJ IDEA.
- *
- * Description:
- * Author: xw
- * Date: 2017-08-30 14:07
+ * description :
+ * author : xw
+ * date : 2017-09-14 17:39
  */
 @Repository
-public interface UserDao extends JpaRepository<User,Integer>{
+public interface CardDao extends JpaRepository<Card,Integer>{
 }

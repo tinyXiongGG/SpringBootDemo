@@ -15,25 +15,35 @@ import java.util.Date;
 @Entity
 public class User {
     @Id
-    private Integer id;
+    private Long id;
     private String username;
     private String password;
     private String nickname;
-    private Integer age;
-    private Integer phone;
-    private Integer sex;
-    private Date birthday;
-    @Column(name = "create_time")
-    private Date createTime;
-    @Column(name = "update_time")
-    private Date updateTime;
+    private String phone;
+    private String email;
+    private Date created;
+    private Date updated;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", created=" + created +
+                ", updated=" + updated +
+                '}';
     }
 
     public String getUsername() {
@@ -44,14 +54,6 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public String getNickname() {
         return nickname;
     }
@@ -60,51 +62,43 @@ public class User {
         this.nickname = nickname;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getPassword() {
+        return password;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public Integer getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(Integer phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    public Integer getSex() {
-        return sex;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSex(Integer sex) {
-        this.sex = sex;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public Date getBirthday() {
-        return birthday;
+    public Date getCreated() {
+        return created;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setCreated(Date created) {
+        this.created = created;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getUpdated() {
+        return updated;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+    public void setUpdated(Date updated) {
+        this.updated = updated;
     }
 }

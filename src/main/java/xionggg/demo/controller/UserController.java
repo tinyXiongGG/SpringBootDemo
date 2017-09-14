@@ -2,8 +2,9 @@ package xionggg.demo.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import xionggg.demo.dao.UserDao;
+import xionggg.demo.common.ResultBean;
 import xionggg.demo.entity.User;
+import xionggg.demo.service.UserService;
 
 import javax.annotation.Resource;
 
@@ -18,11 +19,11 @@ import javax.annotation.Resource;
 public class UserController {
 
     @Resource
-    private UserDao userDao;
+    private UserService userService;
 
     @RequestMapping("/register")
-    public void register(User user){
-        userDao.save(user);
+    public ResultBean<User> register(User user){
+        return new ResultBean<>(userService.save(user));
     }
 
 

@@ -1,4 +1,3 @@
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -15,14 +14,8 @@ public class Mytest {
 
     @Test
     public void test(){
-        int m = 10;    //总人数
-        int n = 3;      //
-        int begin = 1;    //
-
 
         chooseKing(300, 6, 1);
-        System.out.println("===========================");
-        yuesefu(300,6,1);
     }
 
     /**
@@ -51,25 +44,5 @@ public class Mytest {
         System.out.println(monkeys);
     }
 
-    public void yuesefu(int totalNum, int countNum,int startNO) {
-        // 初始化人数
-        List<Integer> start = new ArrayList<Integer>();
-        for (int i = 1; i <= totalNum; i++) {
-            start.add(i);
-        }
-        //从下标为K开始计数
-        int k = startNO-1;
-        while (start.size() >0) {
-            System.out.println(start);
-            //第m人的索引位置
-            k = (k + countNum) % (start.size()) - 1;
-            // 判断是否到队尾  到队尾时候k=-1
-            if (k < 0) {
-                start.remove(start.size() - 1);
-                k = 0;
-            } else {
-                start.remove(k);
-            }
-        }
-    }
+
 }
